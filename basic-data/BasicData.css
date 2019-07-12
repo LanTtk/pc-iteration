@@ -1,0 +1,322 @@
+/* body{
+  width: 100vw;
+  height: 100vh;
+} */
+
+html{
+  font-size: 24px;
+  /* width: 1920px;
+  height: 1080px;
+  background: url(../asserts/背景02.png) no-repeat fixed;
+  background-size: 100% 100%;
+  color: #ffffff; */
+}
+body{
+  width: 100%;
+  height: 100%;
+  background: url(../asserts/背景02.png) no-repeat fixed;
+  background-size: 100% 100%;
+  color: #ffffff;
+  font-size: 0.5rem;
+}
+h1{
+  font-size: 1rem;
+}
+.box {
+  width: 100%;
+}
+@media screen and (min-aspect-ratio: 2/1){
+  .scale {
+    width: 100%;
+    padding-bottom: 50%;
+    height: 0;
+    position: relative;
+  }
+}
+/* body{transform: scale(1)} */
+@media screen and (max-aspect-ratio: 4/3){
+  .scale {
+  width: 100%;
+  padding-bottom: 75%;
+  height: 0;
+  position: relative;
+  }
+}
+.frame{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  visibility: visible;
+  position: absolute;
+}
+.logo-title{
+  width: 100%;
+  height: 3.33rem;
+  background: rgba(23,41,70,0.55);
+  display: flex;
+  align-items: center;
+}
+.data-reveal{
+  width: 100%;
+  height: calc(100% - 80px);
+  display: flex;
+}
+.data-reveal .nav{
+  width: 6.25rem;
+  height: calc(100% - 20px);
+  margin: 10px;
+  background: rgba(23,41,70,0.55);
+}
+.data-reveal .nav ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.data-reveal .nav ul li{
+  height: 3.16rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.data-reveal .nav ul li:hover{
+  background: #1D3E6C 
+}
+.data-reveal .nav ul li.active{
+  background: #0B4E91;
+}
+.show-datas{
+  width: calc(100% - 170px);
+}
+/* 基本数据 */
+.basicData{
+  width: 100%;
+  height: 100%;
+}
+.mainData{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: 0.5rem;
+}
+.mainData .tree{
+  margin: 10px 10px 10px 0;
+  width: 450px;
+  padding: 20px;
+  background: rgba(23,41,70,0.55);
+}
+.hidden {
+  display: none;
+}
+.tree-search input {
+  background: rgba(23,41,70,0.55);
+  border: 1px solid #2C3B57;
+  outline: none;
+  width: calc(100% - 8px);
+  height: 24px;
+  margin: 10px 0;
+  padding: 0 4px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+.data-analysis{
+  display: flex;
+  flex: 70%;
+  flex-flow: column;
+}
+.tree-tabs{
+  display: flex;
+  height: 44px;
+  width: 100%;
+  border: 1px solid #2C3B57;
+}
+.tree-tabs li{
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+.tree-tabs .active{
+  background: #0B4E91;
+}
+.analysis-header{
+  height: 123px;
+  background: rgba(23,41,70,0.55);
+  margin: 10px 10px 10px 0;
+}
+.analysis-title{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.analysis-header .tabs{
+  width: 500px;
+  height: 30px;
+  border: 1px solid #2C3B57;
+  border-right: none;
+}
+.analysis-header .tabs ul{
+  display: flex;
+  height: 100%;
+}
+.analysis-header .tabs li{
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  border-right: 1px solid #2C3B57;
+}
+.analysis-header .tabs .active{
+  background: #0B4E91;
+}
+.analysis-body{
+  height: calc(100% - 143px);
+}
+.brief{
+  height: 86px;
+  display: flex;
+}
+.brief div{
+  flex: 1;
+  background: rgba(23,41,70,0.55);
+  margin-right: 10px;
+}
+.chart-table{
+  display: flex;
+  background: rgba(23,41,70,0.55);
+  margin: 10px 10px 10px 0;
+  height: calc(100% - 409px);
+  justify-content: space-between;
+}
+.graphic-data{
+  background: rgba(23,41,70,0.55);
+  margin-right: 10px;
+  height: 293px;
+}
+.graphic-header{
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  padding: 10px;
+}
+#Meter
+{
+  width:90px;
+  height:90px;
+  margin: 10px;
+}
+.analysis-title-left{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.left
+{
+  margin-left:20px;
+}
+.data-analysis .analysis-header .analysis-title .Choice
+{
+  display: flex;
+}
+.data-analysis .analysis-header .analysis-title .Choice .container
+{
+  display: flex;
+  flex-flow:column;
+  margin: 10px;
+}
+.Set
+{
+  width:70px;
+  height:21px;
+  font-size:12px;	
+  background:#204373;
+  color:#578CC9;
+  border: none;
+  outline: none; 
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.data-analysis .analysis-header .analysis-title .Choice .Proportion
+{
+  margin-left:20px;
+  font-size:12px;	
+}
+.data-analysis .analysis-header .analysis-title .Choice .Proportion span
+{
+  display: flex;
+  align-items: center;
+  margin-bottom:11px;
+  margin-left:10px;
+}
+
+/* 运行健康 */
+.health{
+  width: 100%;
+  height: 100%;
+}
+.alarm-main{
+  width: 100%;
+  height: 100%;
+}
+.overview{
+  height: 233px;
+  display: flex;
+}
+.overview > div{
+  display: flex;
+  flex: 1;
+}
+.actual{
+  display: flex;
+  flex-flow: column;
+}
+.actual > div{
+  background: rgba(23,41,70,0.55);
+  flex: 1;
+}
+.actual > div:first-child{
+  margin: 10px 10px 10px 0;
+}
+.actual > div:last-child{
+  margin: 0 10px 10px 0;
+}
+.alarm-total{
+  background: rgba(23,41,70,0.55);
+  margin: 10px 10px 10px 0;
+}
+.month-alarm{
+  background: rgba(23,41,70,0.55);
+  margin: 10px 10px 10px 0;
+}
+.alarm-data{
+  display: flex;
+  height: calc(100% - 233px)
+}
+.actual-alarm{
+  flex: 66.66%;
+  margin: 0 10px 10px 0;
+  background: rgba(23,41,70,0.55);
+}
+.all-statistics{
+  flex: 33.33%;
+  display: flex;
+  flex-flow: column;
+  margin-right: 10px;
+}
+.all-statistics .statistics{
+  background: rgba(23,41,70,0.55);
+  margin-bottom: 10px;
+  height: 185px;
+}
+.all-statistics .alarm-rank{
+  background: rgba(23,41,70,0.55);
+  margin-bottom: 10px;
+  height: calc(100% - 205px);
+}

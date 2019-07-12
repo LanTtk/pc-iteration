@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../asserts/reset.css">
+  <link rel="stylesheet" href="basicData1.css">
+  <script src="../lib/echarts.min.js"></script>
+  <script src="../lib/jquery-1.8.3.js" type="text/javascript"></script>
+  <script src="../lib/template-web.js"></script>
+  <script src="BasicData.js"></script>
+</head>
+
+<body>
+  <div class="scale">
+    <div class="frame">
+      <div class="logo-title">
+        <h1> 数据方舟信息管理平台</h1>
+      </div>
+      <div class="data-reveal">
+        <div class="nav">
+          <ul>
+            <li id="basicData" class="active">基础数据</li>
+            <li id="health">运行健康</li>
+          </ul>
+        </div>
+        <div class="show-datas">
+          <div class="basicData" id="basicDataDetails">
+            <div class="mainData">
+              <!--  左侧树形 -->
+              <div class="tree">
+                <ul class="tree-tabs">
+                  <li id="allMeters" class="all-meters active">全部仪表</li>
+                  <li id="concernMeters" class="my-concern">我的关注</li>
+                </ul>
+                <div class="meters">
+                  <!-- 全部仪表树形 -->
+                  <div class="allMeters">
+                    <div class="tree-search">
+                      <input type="text">
+                    </div>
+                    <div class="tree-header">
+                      <span>名称</span>
+                      <div>
+                        <span>在线/总表数</span>
+                        <span>报警</span>
+                      </div>
+                    </div>
+                    <div class="tree-body">
+                      <div id="meterTree">
+                        仪表树形
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 我的关注树形 -->
+                  <div class="concernMeters hidden">
+                    <div class="tree-search">
+                      <input type="text">
+                    </div>
+                    <div class="tree-header">
+                      <span>名称</span>
+                      <div>
+                        <span>在线/总表数</span>
+                        <span>报警</span>
+                      </div>
+                    </div>
+                    <div class="tree-body">
+                      <div id="meterTree">
+                        仪表树形
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 右侧数据分析 -->
+              <div class="data-analysis">
+                <div class="analysis-header">
+                  <div class="analysis-title">
+                    <div class="analysis-title-left">
+                      <div>
+                        <i class="icon icon-font"></i>
+                        <span class="left">xxxx号场地</span>
+                      </div>
+                      <div class="tabs">
+                        <ul>
+                          <li class="data active">数据</li>
+                          <li>报警</li>
+                          <li>表底数</li>
+                          <li>峰谷平</li>
+                          <li>属性</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="Choice">
+                      <div class="container">
+                        <button value="1" type='button' class="Set">+关注</button>
+                        <button value="1" type='button' class="Set">+仪表对比</button>
+                      </div>
+                      <div class="Proportion">
+
+                      </div>
+                    </div>
+                    <!-- 仪表盘 -->
+                    <div id="Meter">
+                    </div>
+                  </div>
+                </div>
+                <div class="analysis-body">
+                  <!-- 缩略图 -->
+                  <div class="brief">
+                    <div>缩略图1</div>
+                    <div>缩略图2</div>
+                    <div>缩略图3</div>
+                  </div>
+                  <div class="chart-table">
+                    <div class="chart">
+                      主展示图
+                    </div>
+                    <div>
+                      表格
+                    </div>
+                  </div>
+                  <div class="graphic-data">
+                    <div class="graphic-header">
+                      <span>图形数据</span>
+                      <span>放大图标</span>
+                    </div>
+                    <div>
+                      异常处理模块
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="health hidden" id="healthDetails">
+            <div class="alarm-main">
+              <div class="overview">
+                <!-- 概况 -->
+                <div class="actual">
+                  <div>
+                    实时概况
+                  </div>
+                  <div>
+                    在线设备
+                  </div>
+                </div>
+                <div class="alarm-total">
+                  报警处理情况
+                </div>
+                <div class="month-alarm">
+                  本月报警情况
+                </div>
+              </div>
+              <div class="alarm-data">
+                <div class="actual-alarm">
+                  <p>实时报警事件</p>
+                  <div>
+                    报警事件
+                  </div>
+                </div>
+                <div class="all-statistics">
+                  <div class="statistics">
+                    折线图
+                  </div>
+                  <div class="alarm-rank">
+                    次数排名
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/html" id="showDatas">
+
+</script>
+
+</html>
