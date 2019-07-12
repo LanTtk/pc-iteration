@@ -1,4 +1,5 @@
 $(function () {
+  // test updata
   //切换导航
   $('.nav ul').on('click','li',function(e){
     e.stopImmediatePropagation();
